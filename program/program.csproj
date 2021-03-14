@@ -135,6 +135,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Vén_Palócföld_VT_földkönyv_20161122 bizt ment.xls" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
