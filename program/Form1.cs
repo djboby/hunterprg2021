@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+//using iTextSharp.text;
+//using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -243,60 +243,60 @@ namespace program
         }
 
 
-        private void button7_Click(object sender, EventArgs e)
-        {
+        //private void button7_Click(object sender, EventArgs e)
+        //{
 
-            //Creating iTextSharp Table from the DataTable data
-            PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
-            pdfTable.DefaultCell.Padding = 3;
-            pdfTable.WidthPercentage = 100;
-            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdfTable.DefaultCell.BorderWidth = 1;
+        //    //Creating iTextSharp Table from the DataTable data
+        //    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+        //    pdfTable.DefaultCell.Padding = 3;
+        //    pdfTable.WidthPercentage = 100;
+        //    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+        //    pdfTable.DefaultCell.BorderWidth = 1;
 
-            //Adding Header row
-            foreach (DataGridViewColumn column in dataGridView1.Columns)
-            {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-                cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240);
-                pdfTable.AddCell(cell);
-            }
+        //    //Adding Header row
+        //    foreach (DataGridViewColumn column in dataGridView1.Columns)
+        //    {
+        //        PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+        //        cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240);
+        //        pdfTable.AddCell(cell);
+        //    }
 
-            //Adding DataRow
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    pdfTable.AddCell(cell.Value.ToString());
-                }
-            }
+        //    //Adding DataRow
+        //    foreach (DataGridViewRow row in dataGridView1.Rows)
+        //    {
+        //        foreach (DataGridViewCell cell in row.Cells)
+        //        {
+        //            pdfTable.AddCell(cell.Value.ToString());
+        //        }
+        //    }
 
-            //Exporting to PDF
-            string path = Directory.GetCurrentDirectory();
+        //    //Exporting to PDF
+        //    string path = Directory.GetCurrentDirectory();
 
-            string folderPath = path;
-            //@"C:\Users\ge70840\Documents\Visual Studio 2015\Projects\HunterFullPrg\HunterFullPrg\PDF\";
-            //@"C:\Users\ge70840\Documents\Visual Studio 2015\Projects\Hunter\";
-            //if (!Directory.Exists(folderPath))
-            //{
-            //    Directory.CreateDirectory(folderPath);
-            //}
-            using (FileStream stream = new FileStream(folderPath + @"\Nyomtatvany.pdf", FileMode.Create))
-            {
-                Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
-                PdfWriter.GetInstance(pdfDoc, stream);
-                pdfDoc.Open();
-                pdfDoc.Add(pdfTable);
-                pdfDoc.Close();
-                stream.Close();
-            }
-            MessageBox.Show("kész");
-            path = Directory.GetCurrentDirectory();
-            string pathcut = path;
-            //path.Substring(0, path.Length - 10);
-            System.Diagnostics.Process.Start(pathcut + @"\Nyomtatvany.pdf");
+        //    string folderPath = path;
+        //    //@"C:\Users\ge70840\Documents\Visual Studio 2015\Projects\HunterFullPrg\HunterFullPrg\PDF\";
+        //    //@"C:\Users\ge70840\Documents\Visual Studio 2015\Projects\Hunter\";
+        //    //if (!Directory.Exists(folderPath))
+        //    //{
+        //    //    Directory.CreateDirectory(folderPath);
+        //    //}
+        //    using (FileStream stream = new FileStream(folderPath + @"\Nyomtatvany.pdf", FileMode.Create))
+        //    {
+        //        Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+        //        PdfWriter.GetInstance(pdfDoc, stream);
+        //        pdfDoc.Open();
+        //        pdfDoc.Add(pdfTable);
+        //        pdfDoc.Close();
+        //        stream.Close();
+        //    }
+        //    MessageBox.Show("kész");
+        //    path = Directory.GetCurrentDirectory();
+        //    string pathcut = path;
+        //    //path.Substring(0, path.Length - 10);
+        //    System.Diagnostics.Process.Start(pathcut + @"\Nyomtatvany.pdf");
 
 
-        }
+        //}
 
 
 

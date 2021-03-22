@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hunter8Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'C:\USERS\SID1EGR\SOURCE\REPOS\DJBOBY\HUNTERPRG2021\PROGRAM\HUNTER8.MDF.dbo.Munka1$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Munka1$">
+          <Property Name="Helyrajzi szám" Type="nvarchar" MaxLength="255" />
+          <Property Name="Műv#ág" Type="nvarchar" MaxLength="255" />
+          <Property Name="Jel" Type="nvarchar" MaxLength="255" />
+          <Property Name="Min#o#" Type="float" />
+          <Property Name="Terület" Type="float" />
+          <Property Name="Ak#" Type="float" />
+          <Property Name="Kivett megnevezések" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cím" Type="nvarchar" MaxLength="255" />
+          <Property Name="Érd#tipus" Type="nvarchar" MaxLength="255" />
+          <Property Name="Érdekelt" Type="nvarchar" MaxLength="255" />
+          <Property Name="Hányad" Type="nvarchar" MaxLength="255" />
+          <Property Name="Perjel" Type="float" />
+          <Property Name="Részhányad" Type="int" />
+          <Property Name="hossusag" Type="float" />
+          <Property Name="teljes hányad" Type="int" />
+          <Property Name="címkarakter" Type="float" />
+          <Property Name="Név" Type="nvarchar" MaxLength="255" />
+          <Property Name="Meghatalmazott" Type="varchar(max)" />
+          <Property Name="MeghatalmazasDatuma" Type="varchar(max)" />
+        </EntityType>-->
+        <EntityContainer Name="hunter8ModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hunter8Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="hunter8Entities" annotation:LazyLoadingEnabled="true" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hunter8ModelStoreContainer" CdmEntityContainer="hunter8Entities" />
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
