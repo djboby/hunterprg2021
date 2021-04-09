@@ -1,37 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
 using System.Configuration;
 using System.Data;
-using System.Data.OleDb;
 using System.Windows.Forms;
-using System.Configuration;
 using System.Data.SqlClient;
 
 namespace program
 {
-   
+
     class Class1
     {
-        public string MainConnectionstring = ConfigurationManager.ConnectionStrings["program.Properties.Settings.hunter8ConnectionString"].ConnectionString;
+        public string MainConnectionstring = ConfigurationManager.ConnectionStrings["program.Properties.Settings.hunterdataConnectionString"].ConnectionString;
         public DataTable adatleker2(string cmdstr)
         {
 

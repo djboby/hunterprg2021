@@ -33,5 +33,16 @@ namespace program.Properties {
                 return ((string)(this["hunter8ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MR-C-00039\\SQLEXPRESS;Initial Catalog=hunterdata;Integrated Security=" +
+            "True")]
+        public string hunterdataConnectionString {
+            get {
+                return ((string)(this["hunterdataConnectionString"]));
+            }
+        }
     }
 }
